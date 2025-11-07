@@ -3,7 +3,7 @@ package co.edu.uniquindio.poo.iteradorpatron.model;
 import java.util.ArrayList;
 import java.util.List;
 
-public class Playlist {
+public class Playlist implements ICollection<Cancion> {
     private List<Cancion> canciones = new ArrayList<>();
 
     public void agregarCancion(Cancion cancion) {
@@ -19,7 +19,8 @@ public class Playlist {
     }
 
     // Método que crea el iterador asociado a esta lista
-    public PlaylistIterator createIterator() {
+    @Override
+    public Iterator<Cancion> createIterator() {
         return new PlaylistIterator(this);
     }
 }

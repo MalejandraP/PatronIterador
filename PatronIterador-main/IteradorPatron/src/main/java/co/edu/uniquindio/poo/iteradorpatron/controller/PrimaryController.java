@@ -1,12 +1,13 @@
 package co.edu.uniquindio.poo.iteradorpatron.controller;
 
 import co.edu.uniquindio.poo.iteradorpatron.model.Cancion;
+import co.edu.uniquindio.poo.iteradorpatron.model.Iterator;
 import co.edu.uniquindio.poo.iteradorpatron.model.Playlist;
 import co.edu.uniquindio.poo.iteradorpatron.model.PlaylistIterator;
 
 public class PrimaryController {
     private Playlist playlist;
-    private PlaylistIterator iterador;
+    private Iterator<Cancion> iterador;
 
     public PrimaryController() {
         playlist = new Playlist();
